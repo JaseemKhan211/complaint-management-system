@@ -1,0 +1,18 @@
+-- Complaint Total Count SQL QUERY
+SELECT RCVD.RCVD, CLOS.CLOSED, OPN.OPENED
+FROM (
+        SELECT COUNT(COMPLAINT_ID) AS OPENED
+        FROM COM_REG
+        WHERE COMPLAINT_STATUS = 'O'
+    ) OPN,
+    
+    (
+        SELECT COUNT(COMPLAINT_ID) AS CLOSED
+        FROM COM_REG
+        WHERE COMPLAINT_STATUS = 'C'
+    ) CLOS,
+     
+    (
+        SELECT COUNT(COMPLAINT_ID) AS RCVD 
+        FROM COM_REG
+    ) RCVD;

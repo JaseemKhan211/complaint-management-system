@@ -1,0 +1,21 @@
+/* BEGIN comments/chat region styles */
+.t-Chat .t-Chat--own .Comments-icon {
+    margin-right: 0;
+    margin-left: 12px;
+  }
+   
+  .t-Chat .t-Chat--own {
+    flex-direction: row-reverse;
+  }
+   
+  .t-Chat .t-Chat--own .Comments-body {
+    align-items: flex-end;
+  }
+   
+  .t-Chat .t-Chat--own .Comments-comment:after {
+    border-left-color: var(--ut-comment-chat-background-color);
+    border-right-color: rgba(0,0,0,0);
+    right: none;
+    left: 100%;
+  }
+/* END comments/chat region styles */

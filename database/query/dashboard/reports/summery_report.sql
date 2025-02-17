@@ -1,0 +1,8 @@
+-- List of currently open complaints and their status
+SELECT COMPLAINT_PK,
+       TO_CHAR(COMPLAINT_DATE, 'DD-MM-YYYY'),
+       COMPLAINT_DESC,
+       STUDENT_NAME
+FROM COM_REG
+WHERE COMPLAINT_STATUS = 'O'
+ORDER BY COMPLAINT_DATE DESC;
